@@ -7,15 +7,18 @@ configure_osx: true
 
 # Set to 'true' to configure the Dock via dockutil.
 configure_dock: false
-dockitems_remove: []
+dockitems_remove: 
 # - Launchpad
-# - TV
-# - Podcasts
+   - TV
+   - Podcasts
+   - Safari
+   - Mail
+   - Calendar
 # - 'App Store'
-dockitems_persist: []
-# - name: "Sublime Text"
-#   path: "/Applications/Sublime Text.app/"
-#   pos: 5
+dockitems_persist: 
+ - name: "Brave"
+   path: "/Applications/Brave Browser.app/"
+   pos: 1
 
 configure_sudoers: false
 sudoers_custom_config: ''
@@ -24,7 +27,7 @@ sudoers_custom_config: ''
 #   # Allow users in admin group to use sudo with no password.
 #   %admin ALL=(ALL) NOPASSWD: ALL
 
-dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
+dotfiles_repo: https://github.com/rafaeldca/dotfiles.git
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
 dotfiles_files:
@@ -32,12 +35,10 @@ dotfiles_files:
   - .gitignore
   - .inputrc
   - .osx
-  - .vimrc
 
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
   - autoconf
-  - bash-completion
   - doxygen
   - gettext
   - gifsicle
@@ -53,7 +54,6 @@ homebrew_installed_packages:
   - nmap
   - node
   - nvm
-  - php
   - ssh-copy-id
   - cowsay
   - readline
@@ -66,21 +66,25 @@ homebrew_installed_packages:
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
+  - federico-terzi/espanso
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  - chromedriver
+  - aerial # ScreenSaver
+  - alfred
+  - cakebrew
+  - dotnet-sdk
+  - iterm2
+  - maccy
+  - nordvpn
+  - pomodone
+  - postman
+  - powershell
+  - recordit
+  - rectangle
+  - signal
   - docker
-  - dropbox
   - firefox
-  - google-chrome
-  - handbrake
-  - licecap
-  - sequel-ace
-  - slack
-  - sublime-text
-  - transmit
-  - vagrant
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
